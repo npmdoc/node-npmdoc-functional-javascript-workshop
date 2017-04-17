@@ -1,0 +1,233 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/timoxley/functional-javascript-workshop"
+
+    >functional-javascript-workshop (v1.0.6)</a>
+</h1>
+<h4>The basics of functional programming in JavaScript. No libraries required.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.functional-javascript-workshop">module functional-javascript-workshop</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">functional-javascript-workshop.</span>randomizer</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.functional-javascript-workshop.randomizer">module functional-javascript-workshop.randomizer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.functional-javascript-workshop.randomizer.arrayOf">
+            function <span class="apidocSignatureSpan">functional-javascript-workshop.randomizer.</span>arrayOf
+            <span class="apidocSignatureSpan">(minCells, maxCells, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.functional-javascript-workshop.randomizer.arrayOfInts">
+            function <span class="apidocSignatureSpan">functional-javascript-workshop.randomizer.</span>arrayOfInts
+            <span class="apidocSignatureSpan">(maxCells, minInt, maxInt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.functional-javascript-workshop.randomizer.arrayOfLorems">
+            function <span class="apidocSignatureSpan">functional-javascript-workshop.randomizer.</span>arrayOfLorems
+            <span class="apidocSignatureSpan">(minCells, maxCells)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.functional-javascript-workshop.randomizer.int">
+            function <span class="apidocSignatureSpan">functional-javascript-workshop.randomizer.</span>int
+            <span class="apidocSignatureSpan">(min, max)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.functional-javascript-workshop.randomizer.words">
+            function <span class="apidocSignatureSpan">functional-javascript-workshop.randomizer.</span>words
+            <span class="apidocSignatureSpan">(count, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.functional-javascript-workshop" id="apidoc.module.functional-javascript-workshop">module functional-javascript-workshop</a></h1>
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.functional-javascript-workshop.randomizer" id="apidoc.module.functional-javascript-workshop.randomizer">module functional-javascript-workshop.randomizer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.functional-javascript-workshop.randomizer.arrayOf" id="apidoc.element.functional-javascript-workshop.randomizer.arrayOf">
+        function <span class="apidocSignatureSpan">functional-javascript-workshop.randomizer.</span>arrayOf
+        <span class="apidocSignatureSpan">(minCells, maxCells, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function randomArrayOf(minCells, maxCells, callback) {
+  if (&#x27;function&#x27; === typeof maxCells &#x26;&#x26; &#x27;undefined&#x27; === typeof callback) {
+    callback = maxCells
+    maxCells = minCells
+  }
+  return Array.apply(null, { length: randomInt(minCells, maxCells) }).map(callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.functional-javascript-workshop.randomizer.arrayOfInts" id="apidoc.element.functional-javascript-workshop.randomizer.arrayOfInts">
+        function <span class="apidocSignatureSpan">functional-javascript-workshop.randomizer.</span>arrayOfInts
+        <span class="apidocSignatureSpan">(maxCells, minInt, maxInt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function randomArrayOfInts(maxCells, minInt, maxInt) {
+  return randomArrayOf(0, maxCells, function() {
+    return randomInt(minInt, maxInt)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.functional-javascript-workshop.randomizer.arrayOfLorems" id="apidoc.element.functional-javascript-workshop.randomizer.arrayOfLorems">
+        function <span class="apidocSignatureSpan">functional-javascript-workshop.randomizer.</span>arrayOfLorems
+        <span class="apidocSignatureSpan">(minCells, maxCells)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function randomArrayOfLorems(minCells, maxCells) {
+  var loremOptions = Array.prototype.slice(arguments, 2)
+  return randomArrayOf(minCells, maxCells, function() {
+    return loremIpsum.apply(loremIpsum, loremOptions)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.functional-javascript-workshop.randomizer.int" id="apidoc.element.functional-javascript-workshop.randomizer.int">
+        function <span class="apidocSignatureSpan">functional-javascript-workshop.randomizer.</span>int
+        <span class="apidocSignatureSpan">(min, max)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function randomInt(min, max) {
+  if (min === max) return max
+  return Math.floor((Math.random() * (max - min + 1)) + min)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.functional-javascript-workshop.randomizer.words" id="apidoc.element.functional-javascript-workshop.randomizer.words">
+        function <span class="apidocSignatureSpan">functional-javascript-workshop.randomizer.</span>words
+        <span class="apidocSignatureSpan">(count, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function randomWords(count, options) {
+  options = options || {}
+  var result = loremIpsum().split(&#x27; &#x27;).slice(0, count)
+  if (options.capitalized) {
+    result = result.map(function(word) {
+      word = word[0].toUpperCase() + word.substring(1)
+      return word
+    })
+  }
+  return result.join(&#x27; &#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
